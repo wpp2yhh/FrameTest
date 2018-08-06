@@ -27,11 +27,11 @@ class Test_Login(unittest.TestCase):
             # Step2:open login page
             login_page = LoginPage(self.driver)
             # Step3:Enter username
-            login_page.set_username("102003646");
+            login_page.set_usernameByName("102003646","UserID");
             # Step4:Enter password
-            login_page.set_password("123456")
+            login_page.set_passwordByName("123456","Passwrd")
             # Step5:Click loginBtn
-            login_page.click_login()
+            login_page.click_loginByXPath("/html/body/div[2]/form/div/div[5]/a[1]/div/input")
             self.testcaseinfo.result = "Pass"
         except Exception as err:
             print("wpp,----Test_Login-test_Login-err")
